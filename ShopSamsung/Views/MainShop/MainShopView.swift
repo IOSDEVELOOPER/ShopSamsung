@@ -48,8 +48,8 @@ struct MainShopView: View {
                 }
                 .navigationDestination(for: NavigationType.self) {value in
                     switch value{
-                    case .cart : CartView(mainStack: $mainStack)
-                    case .card : CardView(mainStack: $mainStack)
+                    case .cart : CartView(mainStack: $mainStack).navigationBarBackButtonHidden(true)
+                    case .card : CardView(mainStack: $mainStack).navigationBarBackButtonHidden(true)
                     }
                 }
                 .edgesIgnoringSafeArea(.bottom)
